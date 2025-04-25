@@ -1,3 +1,6 @@
+"""
+.. include:: ../../README.md
+"""
 
 from dataclasses import dataclass, field
 
