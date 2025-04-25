@@ -30,7 +30,7 @@ def generate_doc(llm, code: str, item_type: Literal["function", "struct"]) -> Co
     # Using `os.fork` to collect different json schemas in different places.
     # Equilvalent to mirascope.llm.call(tools=[ViewCodeSpace], response_model=CodeItemDoc).
     while tool := llm.try_tool(ViewCodeSpace):
-        llm.assistant(tool.call())
+        llm.system(tool.call())
 
     return llm.parse(CodeItemDoc) 
 ```
