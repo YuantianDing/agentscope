@@ -3,60 +3,6 @@ revision = 1
 requires-python = ">=3.13"
 
 [[package]]
-name = "llmscope"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "mirascope" },
-    { name = "textwrap3" },
-]
-
-[package.optional-dependencies]
-anthropic = [
-    { name = "mirascope", extra = ["anthropic"] },
-]
-azure = [
-    { name = "mirascope", extra = ["azure"] },
-]
-bedrock = [
-    { name = "mirascope", extra = ["bedrock"] },
-]
-cohere = [
-    { name = "mirascope", extra = ["cohere"] },
-]
-google = [
-    { name = "mirascope", extra = ["google"] },
-]
-groq = [
-    { name = "mirascope", extra = ["groq"] },
-]
-litellm = [
-    { name = "mirascope", extra = ["litellm"] },
-]
-openai = [
-    { name = "mirascope", extra = ["openai"] },
-]
-xai = [
-    { name = "mirascope", extra = ["xai"] },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mirascope", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["anthropic"], marker = "extra == 'anthropic'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["azure"], marker = "extra == 'azure'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["bedrock"], marker = "extra == 'bedrock'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["cohere"], marker = "extra == 'cohere'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["google"], marker = "extra == 'google'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["groq"], marker = "extra == 'groq'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["litellm"], marker = "extra == 'litellm'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["openai"], marker = "extra == 'openai'", specifier = ">=1.22.4" },
-    { name = "mirascope", extras = ["xai"], marker = "extra == 'xai'", specifier = ">=1.22.4" },
-    { name = "textwrap3", specifier = ">=0.9.2" },
-]
-provides-extras = ["openai", "anthropic", "google", "groq", "xai", "cohere", "litellm", "azure", "bedrock"]
-
-[[package]]
 name = "aioboto3"
 version = "13.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -711,6 +657,68 @@ wheels = [
 ]
 
 [[package]]
+name = "llmscope"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "mirascope" },
+    { name = "textwrap3" },
+]
+
+[package.optional-dependencies]
+anthropic = [
+    { name = "mirascope", extra = ["anthropic"] },
+]
+azure = [
+    { name = "mirascope", extra = ["azure"] },
+]
+bedrock = [
+    { name = "mirascope", extra = ["bedrock"] },
+]
+cohere = [
+    { name = "mirascope", extra = ["cohere"] },
+]
+google = [
+    { name = "mirascope", extra = ["google"] },
+]
+groq = [
+    { name = "mirascope", extra = ["groq"] },
+]
+litellm = [
+    { name = "mirascope", extra = ["litellm"] },
+]
+openai = [
+    { name = "mirascope", extra = ["openai"] },
+]
+xai = [
+    { name = "mirascope", extra = ["xai"] },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pdoc" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mirascope", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["anthropic"], marker = "extra == 'anthropic'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["azure"], marker = "extra == 'azure'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["bedrock"], marker = "extra == 'bedrock'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["cohere"], marker = "extra == 'cohere'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["google"], marker = "extra == 'google'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["groq"], marker = "extra == 'groq'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["litellm"], marker = "extra == 'litellm'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["openai"], marker = "extra == 'openai'", specifier = ">=1.22.4" },
+    { name = "mirascope", extras = ["xai"], marker = "extra == 'xai'", specifier = ">=1.22.4" },
+    { name = "textwrap3", specifier = ">=0.9.2" },
+]
+provides-extras = ["openai", "anthropic", "google", "groq", "xai", "cohere", "litellm", "azure", "bedrock"]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pdoc", specifier = ">=15.0.3" }]
+
+[[package]]
 name = "markupsafe"
 version = "3.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -869,6 +877,20 @@ wheels = [
 ]
 
 [[package]]
+name = "pdoc"
+version = "15.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9f/e9/66ab0fc39276a1818dea6302858ec9558964d8d9f1c90dd1facfe395d216/pdoc-15.0.3.tar.gz", hash = "sha256:6482d8ebbd40185fea5e6aec2f1592f4be92e93cf6bf70b9e2a00378bbaf3252", size = 155384 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/37/bc3189471c63c84e15f7dc42d4b712747e9662ffbcfacfc4b6a93e6c3bc6/pdoc-15.0.3-py3-none-any.whl", hash = "sha256:686c921ef2622f166de5f73b7241935a4ddac79c8d10dbfa43def8c1fca86550", size = 145950 },
+]
+
+[[package]]
 name = "pillow"
 version = "10.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1016,6 +1038,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ef/fd/24ea4302d7a527d672c5be06e17df16aabfb4e9fdc6e0b345c21580f3d2a/pydantic_core-2.33.1-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:401d7b76e1000d0dd5538e6381d28febdcacb097c8d340dde7d7fc6e13e9f95d", size = 1812963 },
     { url = "https://files.pythonhosted.org/packages/5f/95/4fbc2ecdeb5c1c53f1175a32d870250194eb2fdf6291b795ab08c8646d5d/pydantic_core-2.33.1-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7aeb055a42d734c0255c9e489ac67e75397d59c6fbe60d155851e9782f276a9c", size = 1986896 },
     { url = "https://files.pythonhosted.org/packages/71/ae/fe31e7f4a62431222d8f65a3bd02e3fa7e6026d154a00818e6d30520ea77/pydantic_core-2.33.1-cp313-cp313t-win_amd64.whl", hash = "sha256:338ea9b73e6e109f15ab439e62cb3b78aa752c7fd9536794112e14bee02c8d18", size = 1931810 },
+]
+
+[[package]]
+name = "pygments"
+version = "2.19.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293 },
 ]
 
 [[package]]
