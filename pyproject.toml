@@ -25,7 +25,7 @@ bedrock = ["mirascope[bedrock]>=1.22.4"]
 
 [dependency-groups]
 dev = [
-    "pdoc>=15.0.3",
+    "pdoc3>=0.11.6",
 ]
 
 [build-system]
