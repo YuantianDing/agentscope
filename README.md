@@ -13,7 +13,7 @@ class CodeItemDoc(BaseModel):
     example: str = Field("Provide an example of how this item is used. ")
 
 @llmscope.fn("openai", model="gpt-4o")
-def generate_doc(llm, code: str, item_type: Literal["function", "struct"]):
+def generate_doc(llm, code: str, item_type: Literal["function", "struct"]) -> CodeItemDoc:
     # Organize your prompts like `print`
     llm.system("You are a professional software engineer writing documentation. ")
     if item_type == "function":
