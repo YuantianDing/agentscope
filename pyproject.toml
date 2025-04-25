@@ -1,0 +1,21 @@
+[project]
+name = "llmscope"
+version = "0.1.0"
+description = "a Python library designed to simplify interactions with Large Language Models (LLMs) by providing a stateful, fluent interface for managing conversation history, tool usage, and response parsing. It leverages libraries like `mirascope` for LLM calls and `pydantic` for data validation and parsing."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mirascope>=1.22.4",
+    "textwrap3>=0.9.2",
+]
+
+[project.optional-dependencies]
+openai = ["mirascope[openai]>=1.22.4"]
+anthropic = ["mirascope[anthropic]>=1.22.4"]
+google = ["mirascope[google]>=1.22.4"]
+groq = ["mirascope[groq]>=1.22.4"]
+xai = ["mirascope[xai]>=1.22.4"]
+cohere = ["mirascope[cohere]>=1.22.4"]
+litellm = ["mirascope[litellm]>=1.22.4"]
+azure = ["mirascope[azure]>=1.22.4"]
+bedrock = ["mirascope[bedrock]>=1.22.4"]
