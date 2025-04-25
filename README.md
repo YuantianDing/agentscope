@@ -1,5 +1,8 @@
 # `llmscope`
 
+[![PyPI](https://img.shields.io/pypi/v/llmscope.svg)](https://pypi.org/project/llmscope/)
+[![Documentation](https://readthedocs.org/projects/llmscope/badge/?version=latest)](https://yuantianding.github.io/llmscope/)
+
 `llmscope` is a Python library designed to simplify interactions with Large Language Models (LLMs) by providing a stateful, fluent interface for managing conversation history, tool usage, and response parsing. It leverages libraries like `mirascope` for LLM calls and `pydantic` for data validation and parsing.
 
 ## A Taste of `llmscope`
